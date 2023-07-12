@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { Housinglocation } from '../housinglocation';
 import { HousingService } from '../housing.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HousingLocationComponent],
+  imports: [CommonModule, HousingLocationComponent, RouterModule],
   template: `
    <section>
     <form >
@@ -15,7 +16,7 @@ import { HousingService } from '../housing.service';
       <button class="primary" type="button">Search</button>
     </form>
     <section class="results">
-    <app-housing-location *ngFor="let housingLocation of housingLocationList " [housingLocation]="housingLocation"></app-housing-location>
+    <app-housing-location [routerLink]="['/']" *ngFor="let housingLocation of housingLocationList " [housingLocation]="housingLocation"></app-housing-location>
     </section>
    </section>
   `,
@@ -23,9 +24,9 @@ import { HousingService } from '../housing.service';
 })
 export class HomeComponent {
   housingLocationList:Housinglocation[] = []
-  houseService:HousingService = inject(HousingService)
+  // houseService:HousingService = inject(HousingService)
 
-  constructor(){
+  constructor(private houseService:HousingService){
     this.housingLocationList = this.houseService.getAllHousingLocations()
   }
 }
