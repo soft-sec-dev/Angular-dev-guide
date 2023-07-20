@@ -12,21 +12,33 @@ import { RouterModule } from '@angular/router';
   template: `
    <section>
     <form >
-      <input type="text" placeholder="Filter by  city">
-      <button class="primary" type="button">Search</button>
+      <input type="text" placeholder="Filter by  city" #filter (input)="filterResults(filter.value)">
+      <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
     </form>
     <section class="results">
-    <app-housing-location [routerLink]="['/']" *ngFor="let housingLocation of housingLocationList " [housingLocation]="housingLocation"></app-housing-location>
+    <app-housing-location [routerLink]="['/']" *ngFor="let housingLocation of filteredLocationList " [housingLocation]="housingLocation"></app-housing-location>
     </section>
    </section>
   `,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  housingLocationList:Housinglocation[] = []
+  housingLocationList: Housinglocation[] = []
+  filteredLocationList: Housinglocation[] = [];
+
   // houseService:HousingService = inject(HousingService)
 
-  constructor(private houseService:HousingService){
+  constructor(private houseService: HousingService) {
     this.housingLocationList = this.houseService.getAllHousingLocations()
+    this.filteredLocationList = this.housingLocationList
+  }
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredLocationList = this.housingLocationList;
+    }
+
+    this.filteredLocationList = this.housingLocationList.filter(
+      housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+    );
   }
 }
