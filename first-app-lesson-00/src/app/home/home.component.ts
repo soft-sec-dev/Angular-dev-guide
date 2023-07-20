@@ -5,6 +5,7 @@ import { Housinglocation } from '../housinglocation';
 import { HousingService } from '../housing.service';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -28,9 +29,12 @@ export class HomeComponent {
 
   // houseService:HousingService = inject(HousingService)
 
-  constructor(private houseService: HousingService) {
-    this.housingLocationList = this.houseService.getAllHousingLocations()
-    this.filteredLocationList = this.housingLocationList
+  constructor(private housingService: HousingService) {
+    // this.housingLocationList = this.houseService.getAllHousingLocations()
+    this.housingService.getAllHousingLocations().then((housingLocationList: Housinglocation[]) => {
+      this.housingLocationList = housingLocationList;
+      this.filteredLocationList = housingLocationList;
+    });
   }
   filterResults(text: string) {
     if (!text) {

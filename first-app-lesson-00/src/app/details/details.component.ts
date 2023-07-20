@@ -67,7 +67,10 @@ export class DetailsComponent {
 
   constructor() {
     this.housingLocationId = Number(this.route.snapshot.params['id'])
-    this.housingLocation = this.housingService.getHousingLocationByID(this.housingLocationId)
+    this.housingService.getHousingLocationByID(this.housingLocationId)
+      .then(housingLocation=>{
+        this.housingLocation = housingLocation
+      })
   }
 
   //? Submit info for the form section
