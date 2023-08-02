@@ -16,3 +16,5 @@
   - Add the search feature to your app -> `<button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>`
   - json-server to comunicate http -> `json-server --watch db.json`
 s
+### Angular Tour of Heroes
+- 
