@@ -6,10 +6,12 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 
 //? Two ways data binding
 import { FormsModule } from '@angular/forms';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,

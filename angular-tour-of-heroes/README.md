@@ -7,3 +7,6 @@
 2. Display a selection list
 - event binding -> (onCheck) (onClick)
 - class binding -> bind css class with conditional angular directives
+
+3. Create a feature component
+- @Input() one way data binding -> parent to child 
