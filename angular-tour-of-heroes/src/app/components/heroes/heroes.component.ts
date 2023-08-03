@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from 'src/app/interfaces/hero';
+import { HEROES } from 'src/app/mock-heroes';
 
 @Component({
   selector: 'app-heroes',
@@ -7,8 +8,16 @@ import { Hero } from 'src/app/interfaces/hero';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent {
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
+  rename!:string
+  heroes: Hero[] = HEROES
+  heroSelected?:Hero
+
+  pressbutton(id:number){
+
   }
+  onSelect(hero:Hero){
+    this.heroSelected = hero
+    console.log(this.heroSelected)
+  }
+
 }
