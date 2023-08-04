@@ -10,3 +10,9 @@
 
 3. Create a feature component
 - @Input() one way data binding -> parent to child 
+
+4. Add Service
+- Dependency inyection system
+- Returning `Observable` using of() simialr to -> [http.client.get()](https://angular.io/tutorial/tour-of-heroes/toh-pt6) -> method asyncronic
+- service in service -> two service with comunication betwen thems
+
