@@ -16,3 +16,6 @@
 - Returning `Observable` using of() simialr to -> [http.client.get()](https://angular.io/tutorial/tour-of-heroes/toh-pt6) -> method asyncronic
 - service in service -> two service with comunication betwen thems
 
+5. Agregar navegación con enrutamiento
+- Generate with -> `ng generate module app-routing --flat --module=app`
+- Localizar la ruta -> ActivateRoute and Location 
