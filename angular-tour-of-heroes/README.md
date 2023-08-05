@@ -19,3 +19,11 @@
 5. Agregar navegación con enrutamiento
 - Generate with -> `ng generate module app-routing --flat --module=app`
 - Localizar la ruta -> ActivateRoute and Location 
+
+6. Habilitar servicios HTTP
+- Simular un servidor http -> [Api web de memoria](https://github.com/angular/angular/tree/main/packages/misc/angular-in-memory-web-api)
+  - Installl `npm install angular-in-memory-web-api --save`
+- Working with *Observavle* and *of* to return asyncronic objects
+- **Manejo de errores** -> ver de cerca
+- Tap into the Observable -> `tap(_ => )`
+- Obtener héroe por id
