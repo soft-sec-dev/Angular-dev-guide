@@ -1,0 +1,16 @@
+.center-about{
+  height: 93%;
+  margin: auto 0 auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  padding: 0;
+  margin: 0;
+}
+
+/* class */
+.about-main{
+
+}
