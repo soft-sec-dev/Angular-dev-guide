@@ -29,10 +29,22 @@ p {
   -o-transition: all 0.5s;
 }
 .button-main {
+  transition: all 0.5s;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.button-main:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .parrafo-name {
   font-size: 20px;
