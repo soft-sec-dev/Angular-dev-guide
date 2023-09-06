@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ProyectsComponent } from './components/proyects/proyects.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ToolbarComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ProyectsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
