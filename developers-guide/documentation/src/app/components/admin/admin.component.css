@@ -1,0 +1,23 @@
+.main{
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+.admin_introduccion{
+  height: 100vh;
+  background-color:#282c34 ;
+}
+
+@media(max-width:978px){
+  .admin_introduccion{
+    width: 90%;
+  }
+}
+.admin_introduccion-title{
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  align-items: center;
+}
+.string img{
+  height: 40px;
+}

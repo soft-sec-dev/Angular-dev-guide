@@ -1,0 +1,11 @@
+section{
+  padding: 1rem;
+  letter-spacing: -0.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1{
+  text-decoration: underline;
+}
